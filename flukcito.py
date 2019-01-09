@@ -1,4 +1,7 @@
+from decouple import config, Csv
+
 import discord
+
 
 client = discord.Client()
 
@@ -21,4 +24,4 @@ async def on_ready():
     print(client.user.id)
     print('------')
 
-client.run('NTMxOTIwMDgzMzM4MTMzNTA0.DxaSuw.FVTiEMZsnUWNpi-fgB7-u9Ivk_o')
+client.run(config('TOKEN'))
