@@ -1,1 +1,1 @@
-python flukcito.py
+worker: python flukcito.py
