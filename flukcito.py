@@ -13,7 +13,7 @@ async def on_message(message):
         return
 
     if message.content.startswith('!hello'):
-        msg = 'Hello {0.author.mention}'.format(message)
+        msg = 'Que hay perro {} ✌️'.format(message.author.mention)
         await client.send_message(message.channel, msg)
 
 
@@ -22,6 +22,7 @@ async def on_ready():
     print('Logged in as')
     print(client.user.name)
     print(client.user.id)
+    print(client.user.default_avatar_url)
     print('------')
 
 client.run(config('TOKEN'))
